@@ -4,11 +4,15 @@ import "./card.styles.css";
 
 class Card extends Component {
   render() {
+    const { name, email, id } = this.props.monster;
     return (
       <div className="card-container" key={this.props.id}>
-        <img alt={this.props.imgAlt} src={this.props.imgSrc} />
-        <h2>{this.props.title}</h2>
-        <p>{this.props.description}</p>
+        <img
+          alt={`monster ${name}`}
+          src={`https://robohash.org/${id}?set=set2&size=180x180`}
+        />
+        <h2>{name}</h2>
+        <p>{email}</p>
       </div>
     );
   }

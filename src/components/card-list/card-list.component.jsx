@@ -10,16 +10,7 @@ class CardList extends Component {
     return (
       <div className="card-list">
         {monsters.map((monster) => {
-          const { name, email, id } = monster;
-          return (
-            <Card
-              key={id}
-              imgAlt={`monster ${name}`}
-              imgSrc={`https://robohash.org/${id}?set=set2&size=180x180`}
-              title={name}
-              description={email}
-            />
-          );
+          return <Card monster={monster} />;
         })}
       </div>
     );
